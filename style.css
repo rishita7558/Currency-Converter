@@ -7,13 +7,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: beige;
+    background: linear-gradient(135deg,#f5f7fa, #c3cfe2);
 }
 h1{
     text-align: center;
+    color: #333;
 }
 .amount p{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    color: #444;
 }
 .container{
     background-color: burlywood;
@@ -21,6 +23,13 @@ h1{
     border-radius: 2rem;
     min-height: 45vh;
     min-width: 50vh;
+     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 form{
     margin: 1.9rem 0 1rem 0;
@@ -36,6 +45,11 @@ form input{
     font-size: 1rem;
     height: 2rem;
     padding: 0.35rem;
+    transition: 0.3s ease;
+}
+form input:focus {
+    border-color: rgb(244, 196, 175);
+    box-shadow: 0 0 5px rgb(244, 196, 175);
 }
 form button{
     height:2.5rem;
@@ -43,6 +57,8 @@ form button{
 }
 form button:hover{
     cursor: pointer;
+    background: linear-gradient(135deg, #cfcfc2, #eaeade);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 form button:active{
     opacity: 0.75;
@@ -51,15 +67,18 @@ form button:active{
 .dropdown{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 1rem;
 }
 .dropdown i{
     font-size: 1.5rem;
     margin-top: 2rem;
+    color: #555;
 }
 .dropdown p{
     margin-left: 2.35rem;
     font-size: 1.1rem;
+    color: #333;
 }
  .select-container img{
     max-width: 2.5rem;
@@ -79,6 +98,7 @@ form button:active{
     margin-top: 1rem;
     text-align: center;
     font-size: 1.1rem;
+    color: #444;
 }
 button{
     margin-top: 1rem;
